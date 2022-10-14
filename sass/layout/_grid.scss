@@ -1,0 +1,43 @@
+.row {
+  max-width: $grid-width;
+  //   background-color: aquamarine;
+  margin: 0 auto;
+  font-size: 2.4rem;
+  height: 6rem;
+
+  @include clearfix;
+
+  &:not(:last-child) {
+    margin-bottom: $gutter-vertical;
+  }
+
+  //   [class^='col-'] {
+  //     color: green;
+  //   }
+  .col-1 {
+    width: calc((100% - #{$gutter-horizontal}) / 2);
+    // background-color: orange;
+    float: left;
+
+    &:not(:last-child) {
+      margin-right: $gutter-horizontal;
+    }
+  }
+  .col-2 {
+    width: calc((100% - #{$gutter-horizontal}) / 2);
+    background-color: palevioletred;
+    float: left;
+
+    &.col-2_1 {
+      width: calc((100% - #{$gutter-horizontal}) / 3);
+    }
+
+    &.col-2_2 {
+      width: calc(((100% - #{$gutter-horizontal}) / 3) * 2);
+    }
+
+    &:not(:last-child) {
+      margin-right: $gutter-horizontal;
+    }
+  }
+}
