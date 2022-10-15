@@ -282,13 +282,19 @@ body {
   left: 0;
   width: 100%;
   backface-visibility: hidden;
+  color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 0.4rem rgba(0, 0, 0, 0.15);
 }
 .card-side--front {
-  background-color: #fff;
+  background-color: orangered;
 }
 .card-side--back {
   background-color: green;
   transform: rotateY(180deg);
+}
+.card-side--back-1 {
+  background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
 }
 .card:hover .card-side--front {
   transform: rotateY(180deg);

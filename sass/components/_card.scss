@@ -12,14 +12,25 @@
     left: 0;
     width: 100%;
     backface-visibility: hidden;
+    color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 0.4rem rgba($color-black, 0.15);
 
     &--front {
-      background-color: #fff;
+      background-color: orangered;
     }
     &--back {
       background-color: green;
       transform: rotateY(180deg);
       //   z-index: 999;
+
+      &-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        );
+      }
     }
   }
   &:hover &-side--front {
