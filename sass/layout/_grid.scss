@@ -23,21 +23,29 @@
       margin-right: $gutter-horizontal;
     }
   }
-  .col-2 {
-    width: calc((100% - #{$gutter-horizontal}) / 2);
+  .col-4 {
+    width: calc((100% -#{$gutter-horizontal} / 4));
     background-color: palevioletred;
     float: left;
 
-    &.col-2_1 {
-      width: calc((100% - #{$gutter-horizontal}) / 3);
+    &.col-4_1 {
+      width: calc((100% - #{$gutter-horizontal}* 3) / 4);
     }
 
-    &.col-2_2 {
-      width: calc(((100% - #{$gutter-horizontal}) / 3) * 2);
+    &.col-4_2 {
+      width: calc(((100% - #{$gutter-horizontal}) / 4) * 2);
     }
 
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
     }
+  }
+}
+
+.col-4_1 {
+  width: calc((100% - #{$gutter-horizontal}* 3) / 4);
+  float: left;
+  &:not(:last-child) {
+    margin-right: $gutter-horizontal;
   }
 }
