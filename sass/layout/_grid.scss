@@ -49,7 +49,6 @@
     margin-right: $gutter-horizontal;
   }
 }
-
 .col-3_1 {
   width: calc((100% - #{$gutter-horizontal}* 2) / 3);
   float: left;
