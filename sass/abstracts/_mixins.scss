@@ -34,6 +34,11 @@ $breakpoint argument choices
 - tab-port
 - tab-land
 - big-desktop
+
+Order - Base+typography > gen layout + grid > page layout > components
+
+1em =16px
+
 */
 
 @mixin respond($breakpoint) {
@@ -43,7 +48,7 @@ $breakpoint argument choices
       @content;
     }
   }
-  @if $breakpoint == tab-port {
+  @if $breakpoint == tab-potr {
     @media (max-width: 56.25em) {
       //900
       @content;

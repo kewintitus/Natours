@@ -7,11 +7,31 @@
   @include clearfix;
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
+
+    @include respond(tab-potr) {
+      margin-bottom: $gutter-vertical-small;
+    }
+  }
+  @include respond(tab-potr) {
+    max-width: 50rem;
+    padding: 0 3rem;
   }
 
-  //   [class^='col-'] {
-  //     color: green;
-  //   }
+  [class^='col-'] {
+    float: left;
+
+    &:not(:last-child) {
+      margin-right: $gutter-horizontal;
+      @include respond(tab-potr) {
+        margin-right: 0;
+        margin-bottom: $gutter-vertical-small;
+      }
+    }
+
+    @include respond(tab-potr) {
+      width: 100% !important;
+    }
+  }
   .col-1 {
     width: calc((100% - #{$gutter-horizontal}) / 2);
     // background-color: orange;

@@ -19,9 +19,13 @@ html {
     font-size: 56.25%; //1rem = 9px, 9/16 =56.25%
   }
 
-  @include respond(tab-port) {
+  @include respond(tab-potr) {
     font-size: 50%; //1rem = 8px, 8/16 = 50%
   }
+
+  // @include respond(phone) {
+  //   font-size: 30%;
+  // }
 
   @include respond(big-desktop) {
     font-size: 80%; //1rem = 12px 12/16
@@ -35,4 +39,8 @@ body {
   font-weight: 400;
   line-height: 1.7;
   color: $color-grey-dark;
+
+  @include respond(tab-potr) {
+    padding: 0;
+  }
 }

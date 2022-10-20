@@ -11,6 +11,11 @@
     animation-duration: 3s;
     /* animation-iteration-count: 3; */
     animation-timing-function: ease-out;
+
+    @include respond(phone) {
+      letter-spacing: 1rem;
+      font-size: 5rem;
+    }
   }
   &--sub {
     display: block;
@@ -20,6 +25,11 @@
     animation-name: moveInRight;
     animation-duration: 3s;
     animation-timing-function: ease-out;
+
+    @include respond(phone) {
+      letter-spacing: 0.5rem;
+      // font-size: 5rem;
+    }
   }
 }
 
@@ -37,6 +47,13 @@
   color: transparent;
   letter-spacing: 2px;
   transition: all 0.2s;
+
+  @include respond(tab-potr) {
+    font-size: 3rem;
+  }
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
 
   &:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);

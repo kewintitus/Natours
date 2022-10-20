@@ -3,6 +3,10 @@
   padding: 25rem 0px;
   margin-top: -20rem;
   height: 92rem;
+
+  @include respond(tab-potr) {
+    padding: 20rem 0;
+  }
 }
 
 .section-features {
@@ -15,7 +19,7 @@
     ),
     url('../../img/nat-4.jpg');
   background-size: cover;
-  height: 95vh;
+  // height: 95vh;
 
   transform: skewY(-7deg);
   margin-top: -10rem;
@@ -23,18 +27,31 @@
   & > * {
     transform: skewY(7deg);
   }
+
+  @include respond(tab-potr) {
+    padding: 10rem 0;
+    margin-top: -10rem;
+  }
 }
 
 .section-tours {
   background-color: $color-grey-1;
   padding: 25rem 0 5rem 0;
   margin-top: -10rem;
+
+  @include respond(tab-potr) {
+    padding: 15rem 0;
+  }
 }
 
 .section-stories {
   padding: 15rem 0 15rem 0;
   background-color: transparent;
   position: relative;
+
+  @include respond(tab-potr) {
+    padding: 10rem 0;
+  }
 }
 
 .section-book {
