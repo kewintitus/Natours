@@ -4,7 +4,7 @@
   // position: relative;
   height: 50rem;
   &-side {
-    background-color: orangered;
+    // background-color: orangered;
     height: 50rem;
     transition: all 0.5s ease;
     position: absolute;
@@ -166,5 +166,75 @@
   &__price-value {
     font-size: 6rem;
     font-weight: 100;
+  }
+
+  @include respond(tab-potr) {
+    height: auto;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: $color-white;
+    box-shadow: 0 0.5rem 0.4rem rgba($color-black, 0.15);
+
+    &-side {
+      // background-color: orangered;
+      height: auto;
+      transition: all 0.5s ease;
+      position: relative;
+      box-shadow: none;
+
+      &--back {
+        background-color: green;
+        transform: rotateY(0);
+        //   z-index: 999;
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+
+        &-1 {
+          background-image: linear-gradient(
+            to right bottom,
+            $color-secondary-light,
+            $color-secondary-dark
+          );
+        }
+        &-2 {
+          background-image: linear-gradient(
+            to right bottom,
+            $color-primary-light,
+            $color-primary-dark
+          );
+        }
+        &-3 {
+          background-image: linear-gradient(
+            to right bottom,
+            $color-tertiary-light,
+            $color-tertiary-dark
+          );
+        }
+      }
+    }
+    &:hover &-side--front {
+      transform: rotateY(0);
+    }
+
+    &__details {
+      padding: 0 1rem;
+    }
+
+    &__cta {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translate(0);
+      width: 100%;
+      padding: 7rem 4rem 4rem 4rem;
+    }
+
+    &__price-box {
+      margin-bottom: 3rem;
+    }
+
+    &__price-value {
+      font-size: 6rem;
+      font-weight: 100;
+    }
   }
 }
